@@ -59,7 +59,7 @@ set backspace=indent,eol,start
 
 syntax enable
 colorscheme monokai 
-set guifont=Monaco:h14
+set guifont=Monaco:h12
 " }}}
 
 " Nerdtree ----------------------------------------------------------------- {{{
@@ -97,6 +97,9 @@ nnoremap D d$
 
 " change to uppercase
 nnoremap <C-u> gUiw
+
+" change to lowercase
+nnoremap <C-l> guiw
 
 " }}}
 
@@ -191,6 +194,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'amirh/HTML-AutoCloseTag', { 'for' : ['html', 'xml', 'xhtml'] }
 " Improve status line  style
 Plug 'bling/vim-airline'
+" Zoom into windows
+Plug 'troydm/zoomwintab.vim'
+" Auto complete plugin
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 " }}}
 
