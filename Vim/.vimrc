@@ -186,18 +186,23 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
-Plug 'Shougo/neocomplete.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+" Plug 'Shougo/neocomplete.vim'
+
 " PLugin for comments
 Plug 'scrooloose/nerdcommenter'
 " On-demand loading
 Plug 'amirh/HTML-AutoCloseTag', { 'for' : ['html', 'xml', 'xhtml'] }
 " Improve status line  style
 Plug 'bling/vim-airline'
-" Zoom into windows
+" Zoom into windows <Ctr-w>o to activate
 Plug 'troydm/zoomwintab.vim'
 " Auto complete plugin
 Plug 'Valloric/YouCompleteMe'
+" Indent guides <Leader>ig to activate
+Plug 'nathanaelkane/vim-indent-guides'
+" global search plugin ':Ag nombre
+Plug 'rking/ag.vim'
 call plug#end()
 " }}}
 
