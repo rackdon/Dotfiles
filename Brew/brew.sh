@@ -13,12 +13,9 @@ brew install wget --with-iri
 brew install vim --with-lua --override-system-vi
 
 # Install everything else
-brew install brew-cask
-brew install macvim
+brew install brew-cask-completion
 brew install ruby
-brew install phantomjs
 brew install mongodb
-brew install maven
 brew install openssl
 brew install cscope
 brew install ctags
