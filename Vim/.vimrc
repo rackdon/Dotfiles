@@ -185,7 +185,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
+" PLugin for syntax check
 Plug 'scrooloose/syntastic'
+
 Plug 'jeetsukumaran/vim-buffergator'
 " Plug 'Shougo/neocomplete.vim'
 
@@ -203,6 +205,9 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'nathanaelkane/vim-indent-guides'
 " global search plugin ':Ag nombre
 Plug 'rking/ag.vim'
+" Plugin for git
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 " }}}
 

@@ -20,7 +20,7 @@ brew install openssl
 brew install cscope
 brew install ctags
 brew install python3
-
+brew install node
 
 # Remove outdated versions from the cellar
 brew cleanup
