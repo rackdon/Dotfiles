@@ -178,6 +178,14 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " }}}
 
+" Syntastic ------------------------------------------------------ {{{
+" Stablish js checker as standard
+let g:syntastic_javascript_checkers = ['standard']
+"Automatic formatting on save
+autocmd bufwritepost *.js silent !standard % --format
+set autoread
+" }}}
+
 " VIM-PLUG --------------------------------------------------------- {{{
 
 call plug#begin('~/.vim/plugged')
@@ -189,22 +197,18 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 
 Plug 'jeetsukumaran/vim-buffergator'
-" Plug 'Shougo/neocomplete.vim'
-
+"PLugin for search files
+Plug 'kien/ctrlp.vim'
+"PLugin for search inside files
+Plug 'ervandew/ag'
 " PLugin for comments
 Plug 'scrooloose/nerdcommenter'
-" On-demand loading
-Plug 'amirh/HTML-AutoCloseTag', { 'for' : ['html', 'xml', 'xhtml'] }
 " Improve status line  style
 Plug 'bling/vim-airline'
 " Zoom into windows <Ctr-w>o to activate
 Plug 'troydm/zoomwintab.vim'
-" Auto complete plugin
-Plug 'Valloric/YouCompleteMe'
 " Indent guides <Leader>ig to activate
 Plug 'nathanaelkane/vim-indent-guides'
-" global search plugin ':Ag nombre
-Plug 'rking/ag.vim'
 " Plugin for git
 Plug 'airblade/vim-gitgutter'
 
