@@ -30,8 +30,8 @@ set incsearch
 
 " Use 4 spaces for indent 
 set expandtab
-set shiftwidth=4
-set tabstop=4 
+set shiftwidth=2
+set tabstop=2 
 
 " Show relative line numbers
 "set relativenumber
@@ -86,8 +86,10 @@ nnoremap dH d0
 nnoremap <tab> <c-w>
 " }}}
 
-" open search ----------------------------------------------- {{{
+" search ----------------------------------------------- {{{
 nnoremap s /
+vnoremap s y/<C-R>"<CR>
+nnoremap sc :%s/\<<C-r><C-w>\>/
 " }}}
 
 " editing mappings -------------------------------------------------- {{{
@@ -115,10 +117,15 @@ inoremap (( (
 inoremap { {}<left>
 inoremap {} {}
 inoremap {{ {
+inoremap >> () => {}<left><enter><enter><up><tab>
 " }}}
 
 " movement between windows ------------------------------------------ {{{
 nmap <tab> <C-w><C-w>
+" }}}
+
+" CtrlP plugin ------------------------------------------ {{{
+nmap <C-p> :CtrlP<enter>
 " }}}
 
 " avoid types ------------------------------------------------------- {{{
@@ -211,6 +218,8 @@ Plug 'troydm/zoomwintab.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plugin for git
 Plug 'airblade/vim-gitgutter'
+" Plugin for Typescript syntax
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 " }}}
@@ -231,5 +240,13 @@ augroup ft_js
 	au Filetype javascript setlocal foldmarker={,}
 	au FileType javascript setlocal expandtab
 	au FileType javascript setlocal tabstop=2
+augroup END
+
+augroup ft_typescript
+	au!
+	au FileType typescript setlocal foldmethod=marker
+	au Filetype typescript setlocal foldmarker={,}
+	au FileType typescript setlocal expandtab
+	au FileType typescript setlocal tabstop=2
 augroup END
 " }}}
