@@ -25,7 +25,7 @@ brew cask install spotify
 brew cask install unrarx
 brew cask install google-chrome
 brew cask install postman
-brew cask install intellij-idea  # http://us.idea.lanyus.com/
+brew cask install intellij-idea  # http://us.idea.lanyus.com/     http://idea.qinxi1992.cn
 brew cask install firefox
 brew cask install android-studio
 brew cask install android-sdk
