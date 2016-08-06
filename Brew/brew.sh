@@ -21,6 +21,9 @@ brew install awscli
 npm install -g nave
 npm -g install instant-markdown-d
 
+# Git configuration
+git config --global push.default simple
+
 #Create mongodb directory
 sudo mkdir -p /data/db
 sudo chown -R $USER /data/db
