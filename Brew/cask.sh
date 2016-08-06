@@ -17,29 +17,32 @@ brew install maven
 
 
 # Install applications
+brew cask install iterm2
 brew cask install macvim
 brew cask install telegram
-brew cask install chitchat
+brew cask install whatsapp
 brew cask install slack
 brew cask install spotify
-brew cask install unrarx
 brew cask install google-chrome
 brew cask install postman
-brew cask install intellij-idea  # http://us.idea.lanyus.com/     http://idea.qinxi1992.cn
-brew cask install firefox
+brew cask install rdm
 brew cask install android-studio
-brew cask install android-sdk
-brew cask install vlc
-brew cask install virtualbox
-brew cask install flash-player
-brew cask install libreoffice
+brew cask install google-drive
+
+# IntelliJ 16.04     http://idea.qinxi1992.cn
+
+# Install files preview
 brew cask install suspicious-package
-brew cask install dockertoolbox
+brew cask install qlcolorcode 
+brew cask install qlstephen
+brew cask install qlmarkdown 
+brew cask install quicklook-json 
+brew cask install qlprettypatch 
+brew cask install quicklook-csv 
+brew cask install betterzipql 
+brew cask install qlimagesize 
+brew cask install webpquicklook 
 
-# Install the docker machine
-
-curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
-chmod +x /usr/local/bin/docker-machine
 
 # Remove outdated versions from the cellar
 brew cleanup

@@ -59,7 +59,7 @@ set backspace=indent,eol,start
 
 syntax enable
 colorscheme monokai 
-set guifont=Monaco:h12
+set guifont=Monaco:h10
 " }}}
 
 " Nerdtree ----------------------------------------------------------------- {{{
@@ -220,6 +220,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'airblade/vim-gitgutter'
 " Plugin for Typescript syntax
 Plug 'leafgarland/typescript-vim'
+" Instant markdown
+Plug 'suan/vim-instant-markdown'
 
 call plug#end()
 " }}}

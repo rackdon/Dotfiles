@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install binary packages using Homebrew (http://brew.sh)
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Make sure we're using the latest Homebrew
 brew update
@@ -10,17 +10,20 @@ brew update
 brew install wget --with-iri
 
 # Install more recent version of vim
-brew install vim --with-lua --override-system-vi
+brew install vim --with-lua --with-override-system-vi
 
 # Install everything else
-brew install brew-cask-completion
-brew install ruby
 brew install mongodb
-brew install openssl
-brew install cscope
-brew install ctags
-brew install python3
 brew install node
+brew install awscli
+
+#Install npm packages
+npm install -g nave
+npm -g install instant-markdown-d
+
+#Create mongodb directory
+sudo mkdir -p /data/db
+sudo chown -R $USER /data/db
 
 # Remove outdated versions from the cellar
 brew cleanup
