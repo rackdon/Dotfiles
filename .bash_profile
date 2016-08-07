@@ -1,5 +1,7 @@
+# enable aws bash completion
 complete -C aws_completer aws
-eval "$(docker-machine env default)"
+# stablish docker host
+export DOCKER_HOST=unix:///var/run/docker.sock
 # enables color in the terminal bash shell 
 export CLICOLOR=1 
 # sets up the color scheme for list
@@ -24,9 +26,9 @@ alias grh='clear; git checkout master && git reset --hard origin/master && git p
 alias grhs="clear; git submodule foreach 'git checkout master && git reset --hard origin/master && git pull'"
 alias gsts='git submodule foreach git status'
 
-GERRIT_USER=""
-SLACK_NAME=""
-SLACK_MESSAGE=""
+GERRIT_USER="rackdon"
+SLACK_NAME="ricardo"
+SLACK_MESSAGE="apply Ricardo use strict or not, that is the question... :thinking_face:\n"
 SLACK_URL=""
 REGEX_URL=""
 
