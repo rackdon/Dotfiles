@@ -16,6 +16,8 @@ brew install vim --with-lua --with-override-system-vi
 brew install mongodb
 brew install node
 brew install awscli
+brew install sbt
+brew install scala
 
 #Install npm packages
 npm install -g nave
