@@ -18,6 +18,7 @@ brew install node
 brew install awscli
 brew install sbt
 brew install scala
+brew install leiningen
 
 #Install npm packages
 npm install -g nave
