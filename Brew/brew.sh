@@ -27,9 +27,14 @@ npm -g install instant-markdown-d
 # Git configuration
 git config --global push.default simple
 
-#Create mongodb directory
+# Create mongodb directory
 sudo mkdir -p /data/db
 sudo chown -R $USER /data/db
+
+# Bloq num remap => https://github.com/tekezo/Karabiner-Elements
+mkdir -p ~/.karabiner.d/configuration/
+cd ~/.karabiner.d/configuration/
+curl -L -o karabiner.json https://raw.githubusercontent.com/tekezo/Karabiner-Elements/master/examples/change_caps_lock_to_escape.json
 
 # Remove outdated versions from the cellar
 brew cleanup
