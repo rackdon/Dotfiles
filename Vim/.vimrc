@@ -14,6 +14,10 @@ set nocompatible
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 
+" Adds defcomponent to special indent words:
+let g:clojure_special_indent_words = 'deftype,defrecord,reify,proxy,extend-type,extend-protocol,letfn,defcomponent'
+setlocal lispwords+=go-loop
+
 " Basics ---------------------------------------------------- {{{ 
 
 " Edit the mapleader key
@@ -222,6 +226,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 " Instant markdown
 Plug 'suan/vim-instant-markdown'
+" Clojure Plugins
+Plug 'guns/vim-clojure-static'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-fireplace'
 
 call plug#end()
 " }}}
@@ -250,5 +258,19 @@ augroup ft_typescript
 	au Filetype typescript setlocal foldmarker={,}
 	au FileType typescript setlocal expandtab
 	au FileType typescript setlocal tabstop=2
-augroup END
+a
+augroup ft_clojure
+	au!
+	au FileType clojure setlocal expandtab
+	au FileType clojure setlocal tabstop=2
+	au FileType clojure set shiftwidth=2
+	au FileType clojure set softtabstop=2
+  au FileType clojure map <leader><leader> :Eval<cr>
+	"au FileType clojure silent! call TurnOnClojureFolding()
+augroup ENDugroup END
 " }}}
+
+"au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

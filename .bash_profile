@@ -16,7 +16,6 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES;
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; 
 	killall Finder /System/Library/CoreServices/Finder.app'
 alias gulp="node_modules/.bin/gulp"
-alias rabbitmq-server='/usr/local/Cellar/rabbitmq/3.6.1/sbin/rabbitmq-server'
 alias glog='clear; git log'
 alias gst='git status'
 alias gbr='git branch'
