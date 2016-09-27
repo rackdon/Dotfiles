@@ -258,7 +258,8 @@ augroup ft_typescript
 	au Filetype typescript setlocal foldmarker={,}
 	au FileType typescript setlocal expandtab
 	au FileType typescript setlocal tabstop=2
-a
+augroup END
+
 augroup ft_clojure
 	au!
 	au FileType clojure setlocal expandtab
@@ -267,7 +268,7 @@ augroup ft_clojure
 	au FileType clojure set softtabstop=2
   au FileType clojure map <leader><leader> :Eval<cr>
 	"au FileType clojure silent! call TurnOnClojureFolding()
-augroup ENDugroup END
+augroup END
 " }}}
 
 "au VimEnter * RainbowParenthesesToggle
