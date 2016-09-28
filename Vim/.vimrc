@@ -76,6 +76,14 @@ let NERDTreeMapActivateNode='<space>'
 nmap <F8> :TagbarToggle<CR>
 " }}}
 
+" Rainbow Parentheses ------------------------------------------------------ {{{
+nmap <F3> :RainbowParenthesesToggle<ENTER>
+"au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+" }}}
+
 " }}}
 
 " MAPPINGS ---------------------------------------------------------- {{{
@@ -271,7 +279,3 @@ augroup ft_clojure
 augroup END
 " }}}
 
-"au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
