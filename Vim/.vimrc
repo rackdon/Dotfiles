@@ -95,6 +95,8 @@ nnoremap J 20j
 nnoremap K 20k
 nnoremap dL d$
 nnoremap dH d0
+vnoremap L $
+vnoremap H 0
 nnoremap <tab> <c-w>
 " }}}
 
