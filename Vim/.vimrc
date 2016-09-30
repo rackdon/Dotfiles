@@ -76,17 +76,13 @@ let NERDTreeMapActivateNode='<space>'
 nmap <F8> :TagbarToggle<CR>
 " }}}
 
-" Rainbow Parentheses ------------------------------------------------------ {{{
-nmap <F3> :RainbowParenthesesToggle<ENTER>
-"au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-" }}}
-
 " }}}
 
 " MAPPINGS ---------------------------------------------------------- {{{
+
+" save mappings ------------------------------------------------- {{{
+cnoremap w w<ENTER>
+" }}}
 
 " movement mappings ------------------------------------------------- {{{
 nnoremap L $
@@ -277,6 +273,11 @@ augroup ft_clojure
 	au FileType clojure set shiftwidth=2
 	au FileType clojure set softtabstop=2
   au FileType clojure map <leader><leader> :Eval<cr>
+  au FileType clojure map <F3> :RainbowParenthesesToggle<ENTER>   
+  au FileType clojure RainbowParenthesesLoadRound
+  au FileType clojure RainbowParenthesesLoadSquare
+  au FileType clojure RainbowParenthesesLoadBraces
+  au FileType clojure map <leader>w :Require!<ENTER>
 	"au FileType clojure silent! call TurnOnClojureFolding()
 augroup END
 " }}}
