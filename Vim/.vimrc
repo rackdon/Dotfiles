@@ -80,10 +80,6 @@ nmap <F8> :TagbarToggle<CR>
 
 " MAPPINGS ---------------------------------------------------------- {{{
 
-" save mappings ------------------------------------------------- {{{
-cnoremap w w<ENTER>
-" }}}
-
 " movement mappings ------------------------------------------------- {{{
 nnoremap L $
 nnoremap H 0
@@ -272,12 +268,12 @@ augroup ft_clojure
 	au FileType clojure setlocal tabstop=2
 	au FileType clojure set shiftwidth=2
 	au FileType clojure set softtabstop=2
-  au FileType clojure map <leader><leader> :Eval<cr>
-  au FileType clojure map <F3> :RainbowParenthesesToggle<ENTER>   
+  au FileType clojure map <leader><leader> :Eva<CR>
+  au FileType clojure map <F3> :RainbowParenthesesToggle<CR>   
   au FileType clojure RainbowParenthesesLoadRound
   au FileType clojure RainbowParenthesesLoadSquare
   au FileType clojure RainbowParenthesesLoadBraces
-  au FileType clojure map <leader>w :Require!<ENTER>
+  au FileType clojure map <leader>w :Require!<CR>
 	"au FileType clojure silent! call TurnOnClojureFolding()
 augroup END
 " }}}
