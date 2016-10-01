@@ -56,7 +56,6 @@ set noeol
 " Use backspace for all
 set backspace=indent,eol,start
 
- 
 " }}}
 
 " Appearance --------------------------------------------------------- {{{
@@ -68,12 +67,22 @@ set guifont=Monaco:h10
 
 " Nerdtree ----------------------------------------------------------------- {{{
 map <F2> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\.o$', '\.hi$']
+let NERDTreeIgnore=['\.pyc$', '\.o$', '\.hi$', '.DS_Store', '*.swp']
 let NERDTreeMapActivateNode='<space>'
 "}}}
 
 " Tagbar ------------------------------------------------------------------- {{{
 nmap <F8> :TagbarToggle<CR>
+" }}}
+
+" Gundo -------------------------------------------------------------------- {{{
+nmap <F5> :GundoToggle<CR>
+" }}}
+
+" ctrlp-vim ---------------------------------------------------------------- {{{
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_custom_ignore = '\v%(/\.%(git|hg|svn)|\.%(csv|json|class|o|png|jpg|jpeg|bmp|tar|jar|tgz|deb|zip|xml|html)$|/target/%(quickfix|resolution-cache|streams)|/target/scala-2.10/%(classes|test-classes|sbt-0.13|cache)|/project/target|/project/project|.gradle|.ensime)'
 " }}}
 
 " }}}
@@ -87,8 +96,6 @@ nnoremap J 20j
 nnoremap K 20k
 nnoremap dL d$
 nnoremap dH d0
-vnoremap L $
-vnoremap H 0
 nnoremap <tab> <c-w>
 " }}}
 
@@ -137,7 +144,7 @@ nmap <C-p> :CtrlP<enter>
 " avoid types ------------------------------------------------------- {{{
 nnoremap ; :
 nnoremap ñ :
-inoremap Ñ <Esc> 
+"inoremap  <Esc> 
 " }}}
 
 " folding mappings -------------------------------------------------- {{{
@@ -205,10 +212,14 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
+" Show methods and variables
 Plug 'majutsushi/tagbar'
+Plug 'jakedouglas/exuberant-ctags'
+" Git tree
+Plug 'sjl/gundo.vim'
 " PLugin for syntax check
 Plug 'scrooloose/syntastic'
-
+" Buffer management
 Plug 'jeetsukumaran/vim-buffergator'
 "PLugin for search files
 Plug 'kien/ctrlp.vim'
@@ -268,13 +279,12 @@ augroup ft_clojure
 	au FileType clojure setlocal tabstop=2
 	au FileType clojure set shiftwidth=2
 	au FileType clojure set softtabstop=2
-  au FileType clojure map <leader><leader> :Eva<CR>
-  au FileType clojure map <F3> :RainbowParenthesesToggle<CR>   
+  au FileType clojure map <leader><leader> :Eval<cr>
+  au FileType clojure map <F3> :RainbowParenthesesToggle<ENTER>   
   au FileType clojure RainbowParenthesesLoadRound
   au FileType clojure RainbowParenthesesLoadSquare
   au FileType clojure RainbowParenthesesLoadBraces
   au FileType clojure map <leader>w :Require!<CR>
-	"au FileType clojure silent! call TurnOnClojureFolding()
+  au FileType clojure silent! call TurnOnClojureFolding()
 augroup END
 " }}}
-
