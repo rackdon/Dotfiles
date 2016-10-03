@@ -135,7 +135,6 @@ inoremap (( (
 inoremap { {}<left>
 inoremap {} {}
 inoremap {{ {
-inoremap >> () => {}<left><enter><enter><up><tab>
 " }}}
 
 " movement between windows ------------------------------------------ {{{
@@ -263,12 +262,13 @@ augroup ft_python
 	au Filetype python setlocal foldmethod=indent
 augroup END
 
-augroup ft_js
+augroup ft_javascript
 	au!
 	au FileType javascript setlocal foldmethod=marker
 	au Filetype javascript setlocal foldmarker={,}
 	au FileType javascript setlocal expandtab
 	au FileType javascript setlocal tabstop=2
+  au FileType javascript inoremap >> () => {}<left><enter><enter><up><tab>
 augroup END
 
 augroup ft_typescript
@@ -277,6 +277,7 @@ augroup ft_typescript
 	au Filetype typescript setlocal foldmarker={,}
 	au FileType typescript setlocal expandtab
 	au FileType typescript setlocal tabstop=2
+  au FileType typescript inoremap >> () => {}<left><enter><enter><up><tab>
 augroup END
 
 augroup ft_clojure
