@@ -18,6 +18,11 @@ set shortmess=atI
 let g:clojure_special_indent_words = 'deftype,defrecord,reify,proxy,extend-type,extend-protocol,letfn,defcomponent'
 setlocal lispwords+=go-loop
 
+" Set autosave enabled
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+let g:auto_save_silent = 1  " do not display the auto-save notification
+
 " Basics ---------------------------------------------------- {{{ 
 
 " Edit the mapleader key
@@ -212,6 +217,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
+Plug '907th/vim-auto-save'
 " Show methods and variables
 Plug 'majutsushi/tagbar'
 Plug 'jakedouglas/exuberant-ctags'
