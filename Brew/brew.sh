@@ -19,6 +19,7 @@ brew install awscli
 brew install sbt
 brew install scala
 brew install leiningen
+brew install planck
 
 #Install npm packages
 npm install -g nave
