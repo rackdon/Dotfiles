@@ -104,6 +104,13 @@ nnoremap dH d0
 nnoremap <tab> <c-w>
 " }}}
 
+" visual mappings ------------------------------------------------- {{{
+vnoremap L $
+vnoremap H 0
+vnoremap J 20j
+vnoremap K 20k
+" }}}
+
 " search ----------------------------------------------- {{{
 nnoremap s /
 vnoremap s y/<C-R>"<CR>
