@@ -19,7 +19,7 @@ let g:clojure_special_indent_words = 'deftype,defrecord,reify,proxy,extend-type,
 setlocal lispwords+=go-loop
 
 " Set autosave enabled
-let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save = 1 " enable AutoSave on Vim startup
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_silent = 1  " do not display the auto-save notification
 
@@ -37,7 +37,7 @@ set smartcase
 set hlsearch
 set incsearch
 
-" Use 4 spaces for indent 
+" Use 2 spaces for indent 
 set expandtab
 set shiftwidth=2
 set tabstop=2 
@@ -64,7 +64,6 @@ set backspace=indent,eol,start
 " }}}
 
 " Appearance --------------------------------------------------------- {{{
-
 syntax enable
 colorscheme monokai 
 set guifont=Monaco:h10
@@ -155,7 +154,6 @@ nmap <C-p> :CtrlP<enter>
 " avoid types ------------------------------------------------------- {{{
 nnoremap ; :
 nnoremap ñ :
-"inoremap  <Esc> 
 " }}}
 
 " folding mappings -------------------------------------------------- {{{
@@ -176,36 +174,10 @@ augroup reload_vimrc " {
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 " }}}
+
 " afford Vim to save only read files -------------------------------- {{{
 cmap w!! w !sudo tee % >/dev/null
 " }}}
-
-" }}}
-
-" NeoComplete ------------------------------------------------------ {{{
-" Disable AutoComplPop in vim and enable neocomplete instead
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-
-" Enable smartcase and camelcase autocompletion
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#enable_camel_case = 1
-
-" Change max keyword width in chars (default is 80)
-let g:neocomplete#max_keyword_width = 70
-
-" Set minimum syntax keyword length.
-let g:neocomplete#auto_completion_start_length = 3
-
-" Enable auto-select first candidate automatically (like AutoComplPop)
-let g:neocomplete#enable_auto_select = 1
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " }}}
 
@@ -275,7 +247,7 @@ augroup ft_javascript
 	au Filetype javascript setlocal foldmarker={,}
 	au FileType javascript setlocal expandtab
 	au FileType javascript setlocal tabstop=2
-  au FileType javascript inoremap >> () => {}<left><enter><enter><up><tab>
+	au FileType javascript inoremap >> () => {}<left><enter><enter><up><tab>
 augroup END
 
 augroup ft_typescript
@@ -284,7 +256,7 @@ augroup ft_typescript
 	au Filetype typescript setlocal foldmarker={,}
 	au FileType typescript setlocal expandtab
 	au FileType typescript setlocal tabstop=2
-  au FileType typescript inoremap >> () => {}<left><enter><enter><up><tab>
+	au FileType typescript inoremap >> () => {}<left><enter><enter><up><tab>
 augroup END
 
 augroup ft_clojure
@@ -300,5 +272,6 @@ augroup ft_clojure
   au FileType clojure RainbowParenthesesLoadBraces
   au FileType clojure map <leader>w :Require!<CR>
   au FileType clojure silent! call TurnOnClojureFolding()
+  au FileType clojure nmap A A<left><CR>
 augroup END
 " }}}
