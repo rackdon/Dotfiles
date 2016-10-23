@@ -22,6 +22,10 @@ brew install leiningen
 brew install boot-clj
 brew install planck
 
+# Update boot
+boot -h
+boot -u
+
 #Install npm packages
 npm install -g nave
 npm -g install instant-markdown-d
