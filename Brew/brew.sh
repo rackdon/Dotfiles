@@ -23,7 +23,6 @@ brew install boot-clj
 brew install planck
 
 # Update boot
-boot -h
 boot -u
 
 #Install npm packages
