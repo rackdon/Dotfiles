@@ -19,6 +19,7 @@ brew install awscli
 brew install sbt
 brew install scala
 brew install leiningen
+brew install boot-clj
 brew install planck
 
 #Install npm packages
