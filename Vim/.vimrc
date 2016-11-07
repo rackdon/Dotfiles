@@ -23,6 +23,9 @@ let g:auto_save = 1 " enable AutoSave on Vim startup
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_silent = 1  " do not display the auto-save notification
 
+" Set paredit enabled
+let g:paredit_mode = 1
+
 " Basics ---------------------------------------------------- {{{ 
 
 " Edit the mapleader key
@@ -227,6 +230,7 @@ Plug 'suan/vim-instant-markdown'
 Plug 'guns/vim-clojure-static'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace'
+Plug 'paredit.vim'
 
 call plug#end()
 " }}}
