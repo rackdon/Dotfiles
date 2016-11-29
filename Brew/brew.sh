@@ -36,10 +36,11 @@ git config --global push.default simple
 sudo mkdir -p /data/db
 sudo chown -R $USER /data/db
 
-# Bloq num remap => https://github.com/tekezo/Karabiner-Elements
-mkdir -p ~/.karabiner.d/configuration/
-cd ~/.karabiner.d/configuration/
-curl -L -o karabiner.json https://raw.githubusercontent.com/tekezo/Karabiner-Elements/master/examples/change_caps_lock_to_escape.json
+# Bloq num remap => https://github.com/tekezo/Karabiner-Elements 
+# (SO under sierra 10.12)
+#mkdir -p ~/.karabiner.d/configuration/
+#cd ~/.karabiner.d/configuration/
+#curl -L -o karabiner.json https://raw.githubusercontent.com/tekezo/Karabiner-Elements/master/examples/change_caps_lock_to_escape.json
 
 # Remove outdated versions from the cellar
 brew cleanup
