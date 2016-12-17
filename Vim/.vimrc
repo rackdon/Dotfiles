@@ -19,7 +19,7 @@ let g:clojure_special_indent_words = 'deftype,defrecord,reify,proxy,extend-type,
 setlocal lispwords+=go-loop
 
 " Set autosave enabled
-let g:auto_save = 1 " enable AutoSave on Vim startup
+let g:auto_save = 1
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_silent = 1  " do not display the auto-save notification
 
@@ -210,8 +210,6 @@ Plug 'scrooloose/syntastic'
 Plug 'jeetsukumaran/vim-buffergator'
 "PLugin for search files
 Plug 'kien/ctrlp.vim'
-"PLugin for search inside files
-Plug 'ervandew/ag'
 " PLugin for comments
 Plug 'scrooloose/nerdcommenter'
 " Improve status line  style
@@ -231,6 +229,8 @@ Plug 'guns/vim-clojure-static'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'paredit.vim'
+" Elm plugin
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 " }}}
@@ -245,7 +245,7 @@ augroup ft_python
 	au Filetype python setlocal foldmethod=indent
 augroup END
 
-augroup ft_javascript
+augroup ft_js
 	au!
 	au FileType javascript setlocal foldmethod=marker
 	au Filetype javascript setlocal foldmarker={,}

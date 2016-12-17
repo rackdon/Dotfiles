@@ -1,7 +1,3 @@
-# enable aws bash completion
-complete -C aws_completer aws
-# stablish docker host
-export DOCKER_HOST=unix:///var/run/docker.sock
 # enables color in the terminal bash shell 
 export CLICOLOR=1 
 # sets up the color scheme for list
@@ -10,20 +6,6 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export TERM=xterm-color 
 # Color Prompt 
 export PS1="\[\e[36;1m\]\u@\[\e[32;1m\]\w> \[\e[0m\]" 
-
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; 
-	killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; 
-	killall Finder /System/Library/CoreServices/Finder.app'
-alias gulp="node_modules/.bin/gulp"
-alias glog='clear; git log'
-alias gst='git status'
-alias gbr='git branch'
-alias gch='git checkout'
-alias gup='clear; git checkout master && git fetch && git pull && git pull--tags'
-alias grh='clear; git checkout master && git reset --hard origin/master && git pull'
-alias grhs="clear; git submodule foreach 'git checkout master && git reset --hard origin/master && git pull'"
-alias gsts='git submodule foreach git status'
 
 GERRIT_USER="rackdon"
 SLACK_NAME="ricardo"
@@ -71,5 +53,3 @@ function review () {
         slack-notifier "$response"
     fi
 }
-
-# WMQY-PW7A-NM8C-LJDE-L73U-K4GA

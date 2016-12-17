@@ -1,3 +1,3 @@
-cp -R .vim ~/.vim
-cp .ideavimrc ~/.ideavimrc
-cp .vimrc ~/.vimrc
+cp -R ./vim/.vim ~/.vim
+cp ./vim/.ideavimrc ~/.ideavimrc
+cp ./vim/.vimrc ~/.vimrc
