@@ -21,6 +21,7 @@ brew install scala
 brew install leiningen
 brew install boot-clj
 brew install planck
+brew install postgresql
 
 # Update boot
 boot -u

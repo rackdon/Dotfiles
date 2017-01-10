@@ -28,6 +28,7 @@ brew cask install postman
 brew cask install rdm
 brew cask install android-studio
 brew cask install google-drive
+brew cask install pgadmin4
 
 # IntelliJ 16.04     http://idea.qinxi1992.cn
 

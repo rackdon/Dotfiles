@@ -82,4 +82,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
  alias zshconfig="vim ~/.zshrc"
+ alias postgreStart="pg_ctl -D /usr/local/var/postgres start"
+ alias postgreStop="pg_ctl -D /usr/local/var/postgres stop"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
