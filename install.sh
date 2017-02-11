@@ -4,4 +4,4 @@ sh ./brew/brew.sh
 sh ./brew/cask.sh
 sh ./vim/setup.sh
 sh ./zsh/install.sh
-sh ./spacemacs/install.sh
+#sh ./spacemacs/install.sh
